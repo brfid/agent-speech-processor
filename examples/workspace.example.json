@@ -1,0 +1,7 @@
+{
+  "schema": 1,
+  "archive": "/absolute/archive",
+  "active_session": "/absolute/archive/session.json",
+  "whisper_model": "/absolute/models/ggml-base.en.bin",
+  "research_artifacts": "/absolute/research-artifacts"
+}

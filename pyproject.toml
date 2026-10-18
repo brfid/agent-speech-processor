@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-speech-processor"
+version = "0.1.0"
+description = "Agent speech processor: local interview transcripts, source timecodes, and playback"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/brfid/agent-speech-processor"
+Documentation = "https://github.com/brfid/agent-speech-processor#readme"
+Issues = "https://github.com/brfid/agent-speech-processor/issues"
+
+[project.optional-dependencies]
+test = ["webrtcvad-wheels==2.0.14"]
+models = ["mlx-audio[stt]==0.5.6", "mlx-lm==0.31.3", "librosa==0.11.0", "webrtcvad-wheels==2.0.14"]
+gemma = ["mlx-vlm==0.7.3"]
+
+[project.scripts]
+agent-speech-processor = "agent_speech_processor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
